@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../views/partials/head.ejs'); %>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dnd-file-uploader {
+  width: 50vw;
+}
+
+.drop-area {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #8c8c8c;
+  border: 6px dashed #bfbfbf;
+  border-radius: 16px;
+  user-select: none;
+}
+
+.upload-icon {
+  color: #40a9ff;
+  font-size: 100px;
+}
+
+.tip {
+  font-size: 40px;
+}
+
+.task-list {
+  height: 40vh;
+  margin-top: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  padding: 16px;
+  position: relative;
+}
+</style>
+<body class="container">
+
+<header>
+  <%- include('../views/partials/header.ejs'); %>
+</header>
+<main>
+  <div class="jumbotron">
+    <div class="dnd-file-uploader">
+      <div class="drop-area">
+        <ion-icon class="upload-icon" name="cloud-upload"></ion-icon>
+        <p class="tip">Drag&Drop files here</p>
+      </div>
+      <div class="task-list"></div>
+    </div>
+  
+    <template id="template-task">
+      <div class="task">
+        <a class="task-name" target="_blank">some file name</a>
+        <span class="task-progress">50%</span>
+      </div>
+    </template>
+  </div>
+</main>
+
+<footer>
+  <%- include('../views/partials/footer.ejs'); %>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../javascripts/FileUploader.js"></script>
+<script src="../javascripts/script.js"></script>
+</body>
+
+</html>

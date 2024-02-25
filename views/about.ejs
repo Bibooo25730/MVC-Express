@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EJS About</title>
+    
+    <!-- CSS (load bootstrap from a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body { padding-top:50px; }
+    </style>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dnd-file-uploader {
+  width: 50vw;
+}
+
+.drop-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #8c8c8c;
+  border: 6px dashed #bfbfbf;
+  border-radius: 16px;
+  user-select: none;
+}
+
+.upload-icon {
+  color: #40a9ff;
+  font-size: 100px;
+}
+
+.tip {
+  font-size: 40px;
+}
+
+
+</style>
+<body class="container">
+
+<header>
+  <%- include('../views/partials/header.ejs'); %>
+</header>
+<main>
+  <div class="jumbotron">
+    <div class="dnd-file-uploader">
+      <div class="drop-area">
+        <ion-icon class="upload-icon" name="cloud-upload"></ion-icon>
+        <p class="tip">Hi there 👋, this is Bibooo</p>
+        <h2>Why  ✨ _Bibooo_ ✨?</h2>
+        <p>
+            - Bibo的身法简直就是一种艺术。
+            - 一种站在世界巅峰环视全球的感觉！简单却又华丽！
+            - 所有的溢美之词都不能表达我的崇拜！</p>
+            <h2>Hobbies</h2>
+        <p>
+            - 🔭看书
+            - 👯修道 （奇门遁甲，易经，推背图）
+            - 🌱CSKZ
+            - 😄写码
+            - 🐤开源&分享&无偿
+                        
+        </p>
+        <h2>call me</h2>
+        <p>
+            📫 Bibooo@88.com
+        </p>
+        <h2>My Github</h2>
+        <p>⚡ <a href="https://github.com/Bibooo25730">Bibooo</a></p>
+      </div>
+    
+    </div>
+  
+
+  </div>
+</main>
+
+<footer>
+  <%- include('../views/partials/footer.ejs'); %>
+</footer>
+
+</body>
+
+</html>
+
+
+
+
+
